@@ -10,6 +10,21 @@ namespace Cas21
     {
         static void Main(string[] args)
         {
+            Cas_Deo1();
+            Console.ReadKey();
+        }
+
+        /*
+         * Prvi deo casa,nullables,i null colescing operator
+         * Ternary operator
+         * 
+         */
+
+        static void Cas_Deo1();
+        {
+
+        }
+
             double? num1 = 1;
             double? num2 = 3.14159;
             double? numR;
