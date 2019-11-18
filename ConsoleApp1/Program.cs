@@ -4,30 +4,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1
+namespace Cas21
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int? num1 = null;
-            bool? isItTrue = true;
+            double? num1 = 1;
+            double? num2 = 3.14159;
+            double? numR;
 
-            if (isItTrue != null)
+            //Pregledniji i sazetiji nacin
+            numR = num1 ?? num2;
+
+            //"Razvuceni" nacin
+            if(num1 == null)
             {
-                if (isItTrue == true)
-                {
-                    Console.WriteLine("Value is TRUE.");
-                }
-                else 
-                {
-                    Console.WriteLine("Value is FALSE.");
-                }
+                numR = num2;
             }
             else
             {
-                Console.WriteLine("Value is not chosen.");
+                numR = num1;
             }
+
+            //Ternarni operator
+            numR = (num1 == null) ? num1 : num2;
+
+            Console.WriteLine("Value of numR is {0}", numR);
             Console.ReadKey();
         }
     }
